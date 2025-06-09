@@ -17,7 +17,7 @@ It allows participants to bid by sending ETH, and the winner is the one who offe
 
 Deploy and Test (Example with Remix)
 
-1.  Open `OnchainAuction.sol` in Remix IDE and compile it with a compatible version of Solidity (e.g. `^0.8.20`).
+1.  Open in Remix IDE and compile it with a compatible version of Solidity (e.g. `^0.8.20`).
 2.  **Deploy:**
     *   Go to the tab 'Deploy & Run Transactions'.
     *   Select the environment (Example: "Remix VM" for quick tests, or "Injected Provider - MetaMask" for test networks like Sepolia).
