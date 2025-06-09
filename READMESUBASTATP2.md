@@ -1,11 +1,7 @@
 # ethtrabajopractico
-
-
 This final project - Module 2 of the Ethereum course implements a smart contract for an auction on the Ethereum blockchain using Solidity.
 It allows participants to bid by sending ETH, and the winner is the one who offers the highest amount when the established time ends.
-
 ### Key Variables
-
 *  owner; Address of the auction owner
 *  startingPrice;Initial price of the auction
 *  highestBid; Current highest bid
@@ -27,9 +23,7 @@ Deploy and Test (Example with Remix)
 
 This project is under the MIT license. See the `LICENSE` file (or the SPDX identifier in the code) for more details.
 
-
 pragma solidity ^0.8.20;
-
 // Auction contract with partial refund
 contract Auction {
     // Address of the auction owner
@@ -63,7 +57,6 @@ contract Auction {
         // Amount of the bid
         uint amount;
     }
-
     // Array of bids
     Bid[] public bids;
 
@@ -88,7 +81,6 @@ contract Auction {
         // Set the end time of the auction
         endTime = block.timestamp + _duration;
     }
-
     // Function to place a bid
     function bid(uint _bid) public {
         // Check if the auction has not ended
@@ -125,7 +117,6 @@ contract Auction {
         // Emit an AuctionEnded event
         emit AuctionEnded(highestBidder, highestBid);
     }
-
     // Function to refund bidders
     function refundBidders() public {
         // Check if the auction has ended
@@ -142,19 +133,16 @@ contract Auction {
             }
         }
     }
-
     // Function to get the list of bidders and their bid amounts
     function getBidderList() public view returns (address[] memory, uint[] memory) {
         // Create arrays to store the bidders and their bid amounts
         address[] memory bidders = new address[](bids.length);
         uint[] memory amounts = new uint[](bids.length);
         // Iterate over the bids and store the bidders and their bid amounts
-        for (uint i = 0; i < bids.length; i++)
- {
+        for (uint i = 0; i < bids.length; i++) {
             bidders[i] = bids[i].bidder;
             amounts[i] = bids[i].amount;
         }
-
         return (bidders, amounts);
     }
 }
