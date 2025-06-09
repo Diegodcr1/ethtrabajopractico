@@ -143,7 +143,6 @@ contract Auction {
             bidders[i] = bids[i].bidder;
             amounts[i] = bids[i].amount;
         }
-        return (bidders, amounts);
-    }
+        return (bidders, amounts);    }
 }
 
