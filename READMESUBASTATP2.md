@@ -142,7 +142,6 @@ contract Auction {
         for (uint i = 0; i < bids.length; i++) {
             bidders[i] = bids[i].bidder;
             amounts[i] = bids[i].amount;
+        }        return (bidders, amounts);    }
         }
-        return (bidders, amounts);    }
-}
 
